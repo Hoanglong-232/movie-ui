@@ -1,22 +1,27 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { HiSearch } from 'react-icons/hi';
 import '../Styles/Navbar.css';
 
 function Navbar() {
+    const [toggle, setToggle] = useState(true);
+
     return (
         <Fragment>
             <nav className="">
                 <div className="nav-options">
-                    <h1>REACTFLIX</h1>
-                    <span>Movies</span>
-                    <span>TvShows</span>
-                    <span>Trending</span>
-                    <span>Pricing</span>
+                    <h1 id={toggle ? '' : 'heading'}>REACTFILM</h1>
+                    <span id={toggle ? 'Movies' : 'MoviesLight'}>Movies</span>
+                    <span id={toggle ? 'Movies' : 'MoviesLight'}>TvShows</span>
+                    <span id={toggle ? 'Movies' : 'MoviesLight'}>Trending</span>
+                    <span id={toggle ? 'Movies' : 'MoviesLight'}>Pricing</span>
                 </div>
-                <input type="text" placeholder="Search Whaterver You Want" />
-                <HiSearch />
-                <div id="color-switch">
-                    <div id="color-switcher-move"></div>
+
+                <div className="input-group">
+                    <input type="text" placeholder="Search Whaterver You Want" />
+                    <HiSearch fontSize={21} color="red" id="search" />
+                    <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
+                        <div id={toggle ? 'Color-switcher-mover' : 'Color-switcher-moved'}></div>
+                    </div>
                 </div>
             </nav>
         </Fragment>

@@ -13,6 +13,7 @@ nav a {
     text-decoration: none;
 }
 nav span {
+    color: #ee9b00;
     cursor: pointer;
     margin-left: 40px;
     font-size: 0.85rem;
@@ -22,12 +23,14 @@ nav span:hover {
     color: #fff;
     border-bottom: 2px solid #ee9b00;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 span #HomeLight,
 #MoviesLight,
 #TrendingLight,
 #PricingLight {
-    color: #fff;
+    /* color: #fff; */
+    color: #1dffcb;
 }
 span #HomeLight:hover,
 #MoviesLight:hover,
@@ -57,7 +60,8 @@ span #HomeLight:hover,
 #Color-switcher {
     position: relative;
     margin-right: 40px;
-    background-color: #413e44;
+    /* background-color: #413e44; */
+    background-color: #a37ad1;
     width: 80px;
     height: 40px;
     border-radius: 20px;
@@ -66,7 +70,8 @@ span #HomeLight:hover,
     position: absolute;
     left: 5px;
     top: 4px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #ee0505;
     width: 33px;
     height: 33px;
     border-radius: 50%;
@@ -74,7 +79,8 @@ span #HomeLight:hover,
 }
 #Color-switcher-moved {
     position: absolute;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #01f165;
     left: 40px;
     top: 4px;
     width: 33px;
@@ -85,7 +91,7 @@ span #HomeLight:hover,
 .input-group input {
     position: relative;
     width: 323px;
-    height: 4vh;
+    height: 8vh;
     border-radius: 16px;
     border: none;
     margin-right: 30px;
