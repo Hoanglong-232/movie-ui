@@ -13,7 +13,6 @@ nav a {
     text-decoration: none;
 }
 nav span {
-    color: #ee9b00;
     cursor: pointer;
     margin-left: 40px;
     font-size: 0.85rem;
@@ -91,7 +90,7 @@ span #HomeLight:hover,
 .input-group input {
     position: relative;
     width: 323px;
-    height: 8vh;
+    height: 4vh;
     border-radius: 16px;
     border: none;
     margin-right: 30px;
