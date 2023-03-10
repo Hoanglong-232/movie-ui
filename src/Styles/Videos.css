@@ -71,7 +71,7 @@ body {
     z-index: 999;
 }
 #Nothing {
-    color: green;
+    display: none;
 }
 #NoContainer {
     opacity: 0.35;
