@@ -8,24 +8,29 @@ import NoImg from './no-image.png';
 function TvShows() {
     const { toggle, inputValue } = useContext(Container);
 
+    const input = inputValue;
     const [showData, setShowData] = useState([]);
     const [trailer, setTrailer] = useState(true);
     const [title, setTitle] = useState('');
-    const Api = 'https://api.themoviedb.org/3/discover/tv';
+    const Shown = input ? 'search' : 'discover';
+    const Api = `https://api.themoviedb.org/3/${Shown}/tv`;
     const Images = 'https://image.tmdb.org/t/p/w500/';
 
     const TvShows = async () => {
         const data = await axios.get(Api, {
             params: {
                 api_key: '663c2d1726c0c207cde5bd6924dc1dac',
+                query: input,
             },
         });
         const results = data.data.results;
         setShowData(results);
     };
     useEffect(() => {
-        TvShows();
-    }, []);
+        setTimeout(() => {
+            TvShows();
+        }, 100);
+    }, [input]);
     console.log(showData);
     const TvShowTitle = (shows) => {
         setTitle(shows.name);
@@ -60,6 +65,7 @@ function TvShows() {
                             </Fragment>
                         );
                     })}
+
                     <AiOutlineClose
                         id={trailer ? 'Nothing' : 'Exit1'}
                         className={toggle ? 'DarkTheme' : 'LightThemeClose'}
