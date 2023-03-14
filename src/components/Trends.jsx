@@ -4,6 +4,7 @@ import { Container } from './Navbar';
 import NoImg from './no-image.png';
 import { AiFillPlayCircle, AiOutlineClose } from 'react-icons/ai';
 import '../Styles/Videos.css';
+import TrailerTrending from '../Trailers/TrailerTrending';
 
 function Trends() {
     const Api = 'https://api.themoviedb.org/3';
@@ -58,6 +59,7 @@ function Trends() {
                             </Fragment>
                         );
                     })}
+                    {trailer ? console.log : <TrailerTrending TrendTitle={trendTitle} toggle={toggle} />}
 
                     <AiOutlineClose
                         id={trailer ? 'Nothing' : 'Exit1'}

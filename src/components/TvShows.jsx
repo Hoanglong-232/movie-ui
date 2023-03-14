@@ -4,6 +4,7 @@ import { Container } from './Navbar';
 import '../Styles/Videos.css';
 import { AiFillPlayCircle, AiOutlineClose } from 'react-icons/ai';
 import NoImg from './no-image.png';
+import TrailerTvShows from '../Trailers/TrailerTvShows';
 
 function TvShows() {
     const { toggle, inputValue } = useContext(Container);
@@ -65,6 +66,7 @@ function TvShows() {
                             </Fragment>
                         );
                     })}
+                    {trailer ? console.log : <TrailerTvShows TvShowsTitle={title} toggle={toggle} />}
 
                     <AiOutlineClose
                         id={trailer ? 'Nothing' : 'Exit1'}
